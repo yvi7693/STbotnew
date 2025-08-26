@@ -58,7 +58,7 @@ async def cmd_start(m: Message):
     kb.adjust(2)
 
     text = (
-        "Привет! Здесь можно пополнить баланс в рублях и купить ⭐ Telegram Stars.\n\n"
+        "Привет! Здесь мы научим и расскажем, как пополнить баланс в рублях и купить ⭐ Telegram Stars.\n\n"
         f"Текущая цена: {store.user_price_per_star_rub:.2f} ₽ за 1 ⭐"
     )
     await m.answer(text, reply_markup=kb.as_markup())
