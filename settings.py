@@ -32,3 +32,9 @@ CRYPTO_USDT_LINK = os.getenv("CRYPTO_USDT_LINK", "")
 
 SPLIT_EMAIL = os.getenv("SPLIT_EMAIL", "")
 SPLIT_PASSWORD = os.getenv("SPLIT_PASSWORD", "")
+
+ADMIN_IDS = [5206356561, 639822919]
+# Для супергруппы ID обычно отрицательный и начинается с -100
+ADMIN_GROUP_ID = -4969557812
+
+REQUIRED_CHANNEL = "@Blooness"
