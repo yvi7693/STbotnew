@@ -1,0 +1,36 @@
+services:
+  - type: worker
+    name: telegram-bot
+    env: python
+    plan: starter
+    buildCommand: |
+      pip install --upgrade pip
+      pip install -r requirements.txt
+      python -m playwright install --with-deps chromium
+    startCommand: python bot.py
+    autoDeploy: true
+    envVars:
+      - key: BOT_TOKEN
+        sync: false
+      - key: ADMIN_IDS
+        sync: false
+      - key: CRYPTOPAY_API_TOKEN
+        sync: false
+      - key: CRYPTOPAY_API_URL
+        value: https://pay.crypt.bot/api
+      - key: PAYMENT_PROVIDER_TOKEN
+        sync: false
+      - key: USER_PRICE_PER_STAR
+        value: "1.60"
+      - key: COST_PER_STAR
+        value: "1.45"
+      - key: SBP_INSTRUCTION
+        value: "Отсканируйте QR СБП или переведите по реквизитам. После оплаты нажмите 'Я оплатил'."
+      - key: CRYPTO_TON_LINK
+        sync: false
+      - key: CRYPTO_USDT_LINK
+        sync: false
+      - key: SPLIT_EMAIL
+        sync: false
+      - key: SPLIT_PASSWORD
+        sync: false
